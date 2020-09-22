@@ -1,6 +1,7 @@
 public class MyApp3 {
     public static void main(String[] args) { 
     	Product product = new Product("Edam", 3.3, 120);
+        product.changeAmount(245);
     	System.out.println("Product value is " + product.countValue());
     	product.printProduct();
      }
@@ -10,6 +11,7 @@ public class MyApp3 {
 	private String name;
 	private double price;
 	private int amount; //Amount in storage
+        
 	public Product(String name, double price, int amount) {
 		this.name = name;
 		this.price = price;
@@ -19,6 +21,10 @@ public class MyApp3 {
 		return(amount * price);
 	}
  
+        public void changeAmount(int newvalue){
+            this.amount = newvalue;
+        }
+        
 	public void printProduct() {
 		System.out.printf("Product %s, price %4.1f and balance %d pcs", name,price,amount);
 	}
