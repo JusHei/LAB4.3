@@ -1,2 +1,0 @@
-MyApp3
-Product
